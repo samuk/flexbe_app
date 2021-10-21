@@ -6,15 +6,15 @@ User interface (editor + runtime control) for the FlexBE behavior engine.
 
 Clone the following repos into your ROS workspace:
 
-    ``git clone https://github.com/CNURobotics/flexbe_app/tree/ros2-devel-alpha.git``
+    git clone https://github.com/CNURobotics/flexbe_app/tree/ros2-devel-alpha.git
     
-    ``git clone https://github.com/CNURobotics/flexbe_behavior_engine/tree/ros2-devel-alpha.git``
+    git clone https://github.com/CNURobotics/flexbe_behavior_engine/tree/ros2-devel-alpha.git
     
-    ``colcon build --packages-up-to flexbe_app``
+    colcon build --packages-up-to flexbe_app
 
-    ``. install/setup.bash``
+    . install/setup.bash
     
-    ``ros run flexbe_app flexbe_app`
+    ros run flexbe_app flexbe_app
 
 ## Workspace
 
