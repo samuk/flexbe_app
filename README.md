@@ -6,15 +6,15 @@ User interface (editor + runtime control) for the FlexBE behavior engine.
 
 Clone the following repos into your ROS workspace:
 
-    git clone https://github.com/team-vigir/flexbe_behavior_engine.git  # if not already present
-    git clone https://github.com/FlexBE/flexbe_app.git
+    ``git clone https://github.com/CNURobotics/flexbe_app/tree/ros2-devel-alpha.git``
+    
+    ``git clone https://github.com/CNURobotics/flexbe_behavior_engine/tree/ros2-devel-alpha.git``
+    
+    ``colcon build --packages-up-to flexbe_app``
 
-Build you workspace:
-
-    catkin_make # or catkin build
-
-During the build process, the required nwjs binaries are automatically downloaded and extracted.
-To download the binaries manually instead, run the script `bin/nwjs_install`.
+    ``. install/setup.bash``
+    
+    ``ros run flexbe_app flexbe_app`
 
 ## Workspace
 
