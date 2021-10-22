@@ -8,26 +8,11 @@ Clone the following repos into your ROS workspace:
 
     git clone https://github.com/CNURobotics/flexbe_app/
     
-    cd flexbe_app
-    
-    git checkout ros2-devel-alpha
-    
-     git pull
-
-
-    cd ..
-    
+   
     git clone https://github.com/CNURobotics/flexbe_behavior_engine/
     
-    cd flexbe_behavior_engine
-    
-    git checkout ros2-devel-alpha
-    
-     git pull
-
- 
-    cd ..
-    
+   
+    colcon build --packages-up-to flexbe_app
     colcon build --packages-up-to flexbe_app
 
     . install/setup.bash
