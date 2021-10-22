@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(flexbe_app)
 
-find_package(catkin REQUIRED)
+#find_package(catkin REQUIRED)
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
