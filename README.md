@@ -13,7 +13,7 @@ Clone the following repos into your ROS workspace:
     
    
     colcon build --packages-up-to flexbe_app
-    colcon build --packages-up-to flexbe_app
+    colcon build --packages-up-to flexbe_behavior_engine
 
     . install/setup.bash
     
