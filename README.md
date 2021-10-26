@@ -1,4 +1,4 @@
-# FlexBE App
+# Ros2 FlexBE App
 
 User interface (editor + runtime control) for the FlexBE behavior engine.
 
