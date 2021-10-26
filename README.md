@@ -6,27 +6,25 @@ User interface (editor + runtime control) for the FlexBE behavior engine.
 
 Clone the following repos into your ROS2 workspace:
 
-   cd src
-   git clone https://github.com/CNURobotics/flexbe_behavior_engine
-   cd flexbe_behavior_engine 
-   git checkout  ros2-devel-alpha
-   cd ..
-   git clone https://github.com/CNURobotics/flexbe_app/
-   cd flexbe_app
-   git checkout ros2-devel-alpha
-   cd ..
-   colcon build 
-
+      cd src
+      git clone https://github.com/CNURobotics/flexbe_behavior_engine
+      cd flexbe_behavior_engine 
+      git checkout  ros2-devel-alpha
+      cd ..
+      git clone https://github.com/CNURobotics/flexbe_app/
+      cd flexbe_app
+      git checkout ros2-devel-alpha
+      cd ..
+      colcon build 
     . install/setup.bash
     
-    ros2 run flexbe_app flexbe_app
-    ros2 run flexbe_behavior_engine flexbe_behavior_engine
+    
 
 ## Workspace
 
 In order to create and prepare a new repository for behavior development, run the following script in your ROS workspace and pass it the name of your project or identifier:
 
-    rosrun flexbe_widget create_repo [your_project_name]
+    ros2 run flexbe_widget create_repo [your_project_name]
 
 This will initialize a new local git repository with the correct workspace structure which you can then push to a desired remote location. Make sure that you build the workspace afterwards.
 
@@ -34,19 +32,22 @@ This will initialize a new local git repository with the correct workspace struc
 
 If desired, run the following command to create a shortcut in the application menu:
 
-    rosrun flexbe_app shortcut create
-    rosrun flexbe_app shortcut remove  # if you want to remove it
+    ros2 run flexbe_app shortcut create
+    ros2 run flexbe_app shortcut remove  # if you want to remove it
 
 Use the shortcut or the following command to run the FlexBE App alone, i.e., for only developing behaviors, but not executing them:
 
-    rosrun flexbe_app run_app --offline
+    ros2 run flexbe_app run_app --offline
 
 Omitting the `--offline` arg will let the App try to connect to ROS. You can manually connect/disconnect the App in the *Configuration* view.
 
+========Unchecked for Ros2 below this============
+
+
 Use the following launch file to run FlexBE's operator control station, i.e., everything FlexBE requires on the operator machine for controlling behavior execution:
 
-    roslaunch flexbe_app flexbe_ocs.launch
-    roslaunch flexbe_onboard behavior_onboard.launch  # counterpart expected to run on the robot
+    ros2 launch flexbe_app flexbe_ocs.launch 
+    ros2 launch flexbe_onboard behavior_onboard.launch  # counterpart expected to run on the robot
 
 Use the following launch file to run both of the above for local behavior execution:
 
